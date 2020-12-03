@@ -1,11 +1,13 @@
 package concurrency
 
+// WebsiteChecker is a struct
 type WebsiteChecker func(string) bool
 type result struct {
 	string
 	bool
 }
 
+// CheckWebsites that checks the status of a list of URLs.
 func CheckWebsites(wc WebsiteChecker, urls []string) map[string]bool {
 	results := make(map[string]bool)
 	resultChannel := make(chan result)
