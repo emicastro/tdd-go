@@ -1,4 +1,4 @@
-package select
+package racer
 
 import "testing"
 
@@ -10,6 +10,6 @@ func TestRacer(t *testing.T) {
 	got := Racer(slowURL, fastURL)
 
 	if got != want {
-			t.Errorf("got %q, want %q", got, want)
+		t.Errorf("got %q, want %q", got, want)
 	}
 }
